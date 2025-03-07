@@ -1,0 +1,90 @@
+name: Bug Report
+description: File a bug report about something in the application that isn't working as expected.
+title: "[BUG]: "
+labels: ["bug"]
+assignees:
+ - giacomoronconiobda
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Thank you for taking the time to fill out this bug report and helping us improve Monolith.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: Please provide a description of the bug.
+      placeholder: What is the bug about?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction Steps
+      description: Please summarize the steps required to reproduce the bug, screenshots are welcome.
+      placeholder: How to reproduce the bug?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: Describe what you expect to happen.
+      placeholder: What is the expected result?
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: Describe what actually happens.
+      placeholder: What is the actual result?
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Affected Versions
+      description: Please list the application version(s) that are affected by the bug.
+      placeholder: e.g. 3.2, 3.3.dev0, ...
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: |
+        There are several browser which are compatible with Monolith.
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser Version
+      description: Please specify the Browser version on which you have found the bug.
+      placeholder: "e.g. Chrome 134.0.6998.45"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: Please select the OS on which you have found the bug.
+      options:
+        - Windows
+        - macOS
+        - GNU/Linux
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: |
+        Please provide the application log if relevant, just copy and paste the browser console (Developer Settings) error output.
+      render: sh

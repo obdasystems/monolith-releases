@@ -1,0 +1,7 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Manual
+    url: http://obdasystems.github.io/monolith
+    about: |
+      Before submitting questions, please check that an answer is not already
+      available in the manual.
